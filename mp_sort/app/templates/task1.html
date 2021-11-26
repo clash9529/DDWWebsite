@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <script type="module">import * as library from './static/__target__/library.js'; window.library = library;</script>
+    </head>
+    <body style="background-image: url('/static/covidback.jpg');background-repeat: no-repeat;background-size: cover;">
+        <h1>Welcome to {{title}}:</h1>
+        <h2>Predicting Deaths</h2>
+        <form method="post" action="/computetask1">
+            <p>Enter Number of Covid Cases between 220800 and 46200000: <input name="case" type="number"></p>
+            <p>Enter Percentage of Population Aged 65 or Above between 0.6 and 87.1: <input name="pop" step="0.01" type="number"></p>
+            <p>Enter Number of People Vaccinated between 854400 and 334000000: <input name="vac" type="number"></p>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p id="result"></p>
+        
+        <br><a href="index">Home</a>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <script type="module">import * as library from './static/__target__/library.js'; window.library = library;</script>
+    </head>
+    <body style="background-image: url('/static/covidback.jpg');background-repeat: no-repeat;background-size: cover;">
+        <h1>Welcome to {{title}}:</h1>
+        <h2>Predicting Number of Hospital Admissions in UK</h2>
+        <form method="post" action="/computetask2">
+            <p>Enter Vaccination Rate between 60 and 87.5: <input name="vac" min=60 max=87.5 step="0.01" type="number"></p>
+            <p>Enter Measurement of Visitors to Transit Areas between -42.4 and -22.7: <input name="trans" min=-42.4 max=-22.7 step="0.01" type="number"></p>
+            <p>Enter Number of Days from Introduction of Delta Variant between 0 and 191: <input name="delta" min=0 max=191 type="number"></p>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p id="result"></p>
+        
+        <br><a href="index">Home</a>
+
+    </body>
+</html>
